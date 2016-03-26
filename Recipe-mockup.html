@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			var populateMain = function() {
+				var str = "";
+				var d = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+				for(var i = 0; i < 12; ++i) {
+					str = '<div class="food">';
+					str += '<div class="img"></div>';
+					str += '<div class="expr">Expires: ' + d.toDateString() + '</div>';
+					str += '<div class="name">Placeholder</div></div>';
+					$(".main").append(str);
+				}			
+			}		
+		</script>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="main">
+			<nav>
+				<div class="logo">Intelli<span>Fridge</span></div>
+				<div class="signin">Sign Out</div>
+			</nav>
+			<h1>Recipe</h1>
+			<div class="sidebar">
+				<h2>Ingredients:</h2>
+				<div class="food">
+					<div class="img"></div>
+					<div class="expr">Expires: Tomorrow</div>
+					<div class="name">Ingredient Name</div>				
+				</div>			
+				<div class="food">
+					<div class="img"></div>
+					<div class="expr">Expires: Tomorrow</div>
+					<div class="name">Ingredient Name</div>				
+				</div>
+				<div class="food">
+					<div class="img"></div>
+					<div class="expr">Expires: Tomorrow</div>
+					<div class="name">Ingredient Name</div>				
+				</div>
+			</div>
+			<div class="steps">
+				<h2>Steps:</h2>
+				<ol>
+					<li>One</li>
+					<li>Two</li>
+					<li class="current">Three</li>				
+				</ol>			
+			</div>
+		</div>
+	</body>
+</html>

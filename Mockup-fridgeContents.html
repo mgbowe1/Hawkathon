@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			var populateMain = function() {
+				var str = "";
+				var d = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+				for(var i = 0; i < 12; ++i) {
+					str = '<div class="food">';
+					str += '<div class="img"></div>';
+					str += '<div class="expr">Expires: ' + d.toDateString() + '</div>';
+					str += '<div class="name">Placeholder</div></div>';
+					$(".main").append(str);
+				}			
+			}		
+		</script>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="main">
+			<nav>
+				<div class="logo">Intelli<span>Fridge</span></div>
+				<div class="signin">Sign Out</div>
+			</nav>
+			<h1>What's in My Fridge</h1>
+		</div>
+		<script>
+			populateMain();		
+		</script>
+	</body>
+</html>
