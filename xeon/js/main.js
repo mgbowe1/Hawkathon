@@ -23,7 +23,7 @@ jQuery(function($) {
 		$.ajax({
 			url:"test?id=" + id,
 			error: function() {
-				alert("Something Went Wrong");			
+				$("#currentRecipe").html("<h3>Recipe</h3><p>Oops! Something Went Wrong. Please try another Recipe.</p>");			
 			},
 			success: function(data) {
 				alert(data);
