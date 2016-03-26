@@ -16,6 +16,24 @@ jQuery(function($) {
 		},'json');
 		return false;
 	});
+	
+	//Ajax Recipe
+	var recipes = $('.nav.nav-pills.nav-stacked li a');
+	var getRecipe = function(id) {
+		$.ajax({
+			url:"test?id=" + id,
+			error: function() {
+				alert("Something Went Wrong");			
+			},
+			success: function(data) {
+				alert(data);
+			}
+		});	
+	}
+	recipes.on('click', function() {
+		getRecipe(0);
+		e.preventDefault();
+	});
 
 	//smooth scroll
 	$('.navbar-nav > li').click(function(event) {
@@ -52,4 +70,7 @@ jQuery(function($) {
 			return false;
 		});
 	});
+	$(document).ready(function() {
+            $('.carousel').carousel('pause');
+        });
 });
